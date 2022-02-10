@@ -9,3 +9,7 @@ git remote add origin https://github.com/azzzile/game-jam-nto.git </br>
 git add main.py </br>
 git commit -m "smth" </br>
 git push -u origin main </br>
+
+git remote add origin https://github.com/azzzile/AIEdtech.git  </br>
+git branch -M main   </br>
+git push -u origin main   </br>
