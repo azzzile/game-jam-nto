@@ -25,6 +25,8 @@ class Pac(Widget):
         img = Image(source='cat.png', size_hint=(.5, .5), pos_hint={'center_x': .5, 'center_y': .5})
         return img
 
+
+
     def setup(self):
         # Reset Pac to his default states and start positions.
         self.pos = self.parent.x_marg + (32 * 9), self.parent.y_marg + (32 * 4)
