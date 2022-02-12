@@ -1,0 +1,82 @@
+<Rabi3>:
+	source:'jellyfish.png'
+	size_hint:None,None
+	size:128,128
+	x:64
+	y:100
+<Jellyfish>:
+	source:'images/kotk1.png'
+	size_hint:None,None
+	size:128,128
+	x:50
+	y:500
+<Land>:
+	px:0
+	py:0
+	source:'images/foon.png'
+	size_hint:None,None
+	size:self.width, 96
+
+	x:45*root.px
+	y:45*root.py
+#######
+Gerenciador:
+	Login:
+	Gamee:
+
+<Login>:
+    name: 'login'
+    MDLabel:
+        id: text_change
+        text: 'there will be some text'
+        halign: 'center'
+        theme_text_color: 'Custom'
+        text_color : 148/255,0,211/255,1
+        font_style : 'H1'
+    MDRectangleFlatIconButton:
+        icon: 'android'
+        text: 'START GAME'
+        user_font_size: '100sp'
+        pos_hint: {'center_x':0.5,'center_y':0.7}
+        on_release:
+            root.manager.current= 'tela'
+
+
+<Gamee>:
+	name:'tela'
+	canvas :
+		Rectangle:
+			size: self.size
+			pos: self.pos
+			source:'images/cats.png'
+	BoxLayout:
+		orientation:'vertical'
+		Button :
+			text:'jump'
+			background_normal: "transparent.png"
+	        background_down: "transparent.png"
+	        id: start_button
+	        on_release:
+	            root.start_game()
+	    BoxLayout:
+	    	orientation:'horizontal'
+	    	Button :
+				text:'left'
+				background_normal: "transparent.png"
+	        	background_down: "transparent.png"
+				on_release:
+	            	root.move_left()
+			Button :
+				text:'right'
+				background_normal: "transparent.png"
+	        	background_down: "transparent.png"
+				on_release:
+	            	root.move_right()
+
+#	Button:
+#		text: "Start game"
+#        background_normal: "transparent.png"
+#        background_down: "transparent.png"
+      #  id: start_button
+#        on_release:
+   #     	pass
